@@ -1,0 +1,22 @@
+body {
+  background: linear-gradient(#eee, #314354) fixed;
+  font-family: "Roboto", sans-serif;
+}
+
+header {
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header img {
+  height: 100px;
+}
+
+h1 {
+  color: #314354;
+  font: 55px "Fascinate", cursive;
+}
+main {
+}
