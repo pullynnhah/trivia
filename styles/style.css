@@ -18,6 +18,7 @@ h1 {
   color: #314354;
   font: 55px "Fascinate", cursive;
 }
+
 main {
   width: 80vw;
   margin: 30px auto 100px;
@@ -30,6 +31,10 @@ main {
 form {
   display: flex;
   flex-direction: column;
+}
+
+.hidden {
+  display: none;
 }
 
 label {
