@@ -63,44 +63,62 @@ function loadForm() {
   if (form.classList.contains("hidden")) {
     form.classList.remove("hidden");
   }
-  
-  section.classList.add('hidden');
+
+  section.classList.add("hidden");
   renderFormAmountHTML(1, 50);
   renderFormCategoryHTML();
 }
 
 function loadQuizes() {
-  form.classList.add('hidden');
-  if (section.classList.contains('hidden')) {
-    section.classList.remove('hidden');
+  score = 0;
+  answers = 0;
+  form.classList.add("hidden");
+  if (section.classList.contains("hidden")) {
+    section.classList.remove("hidden");
   }
 
-  let quizesHTML = '';
+  let quizesHTML = "";
   for (const quiz of quizes) {
     quizesHTML += quizHTML(quiz);
   }
-  
+
   section.innerHTML = quizesHTML;
-  section.innerHTML += '<button onclick="getResults()">Get Results</button>'
+  section.innerHTML += '<button class="result-btn">Get Results</button>';
+  resultBtn = document.querySelector(".result-btn");
 }
 
 function quizHTML(quiz) {
   const options = [];
-  options.push(`<p class="correct">${quiz.correct_answer}</p>`);
+  options.push(`<p onclick="verifyAnswer(this)" class="correct">${quiz.correct_answer}</p>`);
   for (const incorrectAnswer of quiz.incorrect_answers) {
-    options.push(`<p>${incorrectAnswer}</p>`)
+    options.push(`<p onclick="verifyAnswer(this)">${incorrectAnswer}</p>`);
   }
-  
+
   options.sort(() => Math.random() - 0.5);
-  console.log(options.join('\n'));
   return `
     <article>
       <h3>${quiz.question}</h3>
-      <div>${options.join('')}</div>
-    </article>`
+      <div>${options.join("")}</div>
+    </article>`;
 }
 
-// function loadGame
+function verifyAnswer(element) {
+  element.classList.add("clicked");
+  element.parentNode.classList.add("played");
+  if (element.classList.contains("correct")) {
+    score++;
+  }
+  answers++;
+
+  if (++answers === sizeQuizes) {
+    resultBtn.addEventListener("click", getResults);
+  }
+}
+
+function getResults() {
+  console.log(score / answers);
+}
+
 const OPEN_TDB_URL = "https://opentdb.com";
 
 const form = document.querySelector("form");
@@ -108,12 +126,16 @@ const amount = document.querySelector("#amount");
 const category = document.querySelector("#category");
 const difficulty = document.querySelector("#difficulty");
 const type = document.querySelector("#type");
-const submitBtn = document.querySelector("button");
-const section = document.querySelector('section');
+const submitBtn = document.querySelector(".submit-btn");
+const section = document.querySelector("section");
+
+let resultBtn = null;
 
 let params = null;
 let quizes = null;
 let sizeQuizes = null;
+let score = null;
+let answers = null;
 submitBtn.addEventListener("click", submitForm);
 
 loadForm();
