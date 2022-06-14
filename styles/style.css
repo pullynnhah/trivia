@@ -1,6 +1,6 @@
 body {
   background: linear-gradient(#eee, #314354) fixed;
-  font-family: "Mali", sans-serif;
+  font-family: "Nunito", sans-serif;
 }
 
 header {
@@ -34,14 +34,14 @@ form {
 
 label {
   color: #212121;
-  font-weight: 700;
-  font-size: 24px;
+  font-weight: 900;
+  font-size: 26px;
   margin-bottom: 10px;
 }
 
 select {
-  font-weight: 700;
-  font-size: 20px;
+  font-weight: 900;
+  font-size: 22px;
   appearance: menulist-button;
   padding: 10px;
   background-color: #37383a;

@@ -11,11 +11,10 @@
     <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
 
     <!-- fonts -->
-    <!-- TODO: remove unused Roboto font styles -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Fascinate&family=Mali:wght@300;500;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Fascinate&family=Nunito:wght@500;700;900&display=swap"
       rel="stylesheet" />
 
     <!-- stylesheets -->
@@ -54,17 +53,18 @@
           <option value="hard">Hard</option>
         </select>
 
-        <label for="type">Select Type</label>
+        <label for="type">Select Type:</label>
         <select id="type">
           <option value="">Any Type</option>
           <option value="multiple">Multiple Choice</option>
           <option value="boolean">True / False</option>
         </select>
 
-        <button onclick="submitForm()">Create Quiz</button>
+        <button>Create Quiz</button>
       </form>
     </main>
     <!-- scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="scripts/script.js"></script>
   </body>
 </html>
