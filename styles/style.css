@@ -125,7 +125,7 @@ p {
   font-size: 20px;
 }
 
-article:not(.played) p:hover {
+div:not(.played) p:hover {
   color: #fbdb75;
   cursor: pointer;
 }

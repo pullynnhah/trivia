@@ -103,14 +103,17 @@ function quizHTML(quiz) {
 }
 
 function verifyAnswer(element) {
-  element.classList.add("clicked");
-  element.parentNode.classList.add("played");
-  if (element.classList.contains("correct")) {
-    score++;
-  }
+  const parent = element.parentNode;
+  if (!parent.classList.contains("played")) {
+    element.classList.add("clicked");
+    parent.classList.add("played");
+    if (element.classList.contains("correct")) {
+      score++;
+    }
 
-  if (++answers === sizeQuizes) {
-    resultBtn.addEventListener("click", getResults);
+    if (++answers === sizeQuizes) {
+      resultBtn.addEventListener("click", getResults);
+    }
   }
 }
 
