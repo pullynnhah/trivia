@@ -22,13 +22,13 @@ h1 {
 main {
   width: 80vw;
   margin: 30px auto 100px;
+}
+
+form {
   padding: 40px 20px;
 
   border: 3px solid #212121;
   border-radius: 20px;
-}
-
-form {
   display: flex;
   flex-direction: column;
 }
@@ -62,8 +62,9 @@ button:hover {
   color: #fbdb75;
 }
 
-select:focus, button:focus {
-  color: #F26674;
+select:focus,
+button:focus {
+  color: #82bcf3;
 }
 
 button {
@@ -79,4 +80,65 @@ button {
   border-radius: 20px;
   cursor: pointer;
   box-shadow: 1px 1px rgba(0, 0, 0, 0.3);
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+article {
+  padding: 20px;
+  border: 3px solid #212121;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+h3 {
+  font-weight: 700;
+  font-size: 25px;
+}
+
+article div {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+p {
+  width: 45%;
+  padding: 10px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  color: #ddd;
+  background-color: #37383a;
+  border-radius: 10px;
+
+  font-weight: 700;
+  font-size: 20px;
+}
+
+article:not(.played) p:hover {
+  color: #fbdb75;
+  cursor: pointer;
+}
+
+.played p:not(.clicked) {
+  transform: scale(0.7);
+}
+
+.played p:not(.correct) {
+  background-color: #f26674;
+}
+
+.played .correct {
+  color: #37383a;
+  background-color: #b3de8a;
 }
