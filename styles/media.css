@@ -1,3 +1,56 @@
 @media (min-width: 600px) {
+  header {
+    height: 250px;
+  }
+
+  header img {
+    height: 200px;
+  }
+
+  h1 {
+    font-size: 120px;
+  }
+
+  main {
+    max-width: 900px;
+  }
+
+  form {
+    padding: 60px 40px;
+  }
+
+  label {
+    font-size: 32px;
+  }
+
+  select {
+    font-size: 28px;
+  }
+
+  article {
+    padding: 40px;
+  }
+
+  h3 {
+    font-size: 30px;
+  }
+
+  article div {
+    margin-top: 40px;
+  }
+
+  .quizes p {
+    font-size: 40px;
+    padding: 30px 10px;
+  }
+
+
+  p {
+    font-size: 56px;
+  }
+
+  h4 {
+    font-size: 150px;
+  }
 
 }
