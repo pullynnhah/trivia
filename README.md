@@ -1,3 +1,3 @@
-# Projeto 
+# Trivia
 
-> Você pode visualizar a página [aqui](https://p.driven-paulaabro.com).
+> You can find the website [here](https://trivia.paulaabro.com).
