@@ -108,7 +108,6 @@ function verifyAnswer(element) {
   if (element.classList.contains("correct")) {
     score++;
   }
-  answers++;
 
   if (++answers === sizeQuizes) {
     resultBtn.addEventListener("click", getResults);
