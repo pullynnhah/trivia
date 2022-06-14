@@ -15,7 +15,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Fascinate&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Fascinate&family=Mali:wght@300;500;700&display=swap"
       rel="stylesheet" />
 
     <!-- stylesheets -->
@@ -29,7 +29,41 @@
       <h1>Trivia</h1>
     </header>
 
+    <main>
+      <form>
+        <label for="amount">Number of Question:</label>
+        <select id="amount">
+          <option>1</option>
+          <option>2</option>
+          <option>3</option>
+          <option selected="selected">4</option>
+          <option>5</option>
+          <option>6</option>
+        </select>
 
+        <label for="category">Select Category:</label>
+        <select id="category">
+          <option value="">Any Category</option>
+        </select>
+
+        <label for="difficulty">Select Difficulty:</label>
+        <select id="difficulty">
+          <option value="" selected="selected">Any Difficulty</option>
+          <option value="easy">Easy</option>
+          <option value="medium">Medium</option>
+          <option value="hard">Hard</option>
+        </select>
+
+        <label for="type">Select Type</label>
+        <select id="type">
+          <option value="">Any Type</option>
+          <option value="multiple">Multiple Choice</option>
+          <option value="boolean">True / False</option>
+        </select>
+
+        <button onclick="submitForm()">Create Quiz</button>
+      </form>
+    </main>
     <!-- scripts -->
     <script src="scripts/script.js"></script>
   </body>

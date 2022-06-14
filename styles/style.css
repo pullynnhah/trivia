@@ -1,6 +1,6 @@
 body {
   background: linear-gradient(#eee, #314354) fixed;
-  font-family: "Roboto", sans-serif;
+  font-family: "Mali", sans-serif;
 }
 
 header {
@@ -19,4 +19,59 @@ h1 {
   font: 55px "Fascinate", cursive;
 }
 main {
+  width: 80vw;
+  height: calc(80vh - 150px);
+  margin: auto;
+  padding: 5vw;
+
+  border: 3px solid #212121;
+  border-radius: 20px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  color: #212121;
+  font-weight: 700;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+select {
+  font-weight: 700;
+  font-size: 20px;
+  appearance: menulist-button;
+  padding: 10px;
+  background-color: #37383a;
+  color: #ddd;
+  border-radius: 10px;
+  margin-bottom: 30px;
+  cursor: pointer;
+  box-shadow: 1px 1px rgba(0, 0, 0, 0.3);
+}
+
+select:hover,
+button:hover {
+  color: #fbdb75;
+}
+
+select:focus, button:focus {
+  color: #F26674;
+}
+
+button {
+  width: 100%;
+  font: 36px "Fascinate", cursive;
+  text-align: center;
+
+  color: #ddd;
+  background-color: #37383a;
+
+  padding: 10px;
+  border-radius: 20px;
+  cursor: pointer;
+  box-shadow: 1px 1px rgba(0, 0, 0, 0.3);
 }
