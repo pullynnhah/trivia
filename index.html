@@ -53,7 +53,14 @@
         <button class="submit-btn">Create Quiz</button>
       </form>
 
-      <section class="hidden"></section>
+      <section class="quizes hidden"></section>
+      <section class="results hidden">
+        <div>
+          <p>Score:</p>
+          <h4></h4>
+        </div>
+        <button onclick="restart()" class="replay-btn">Replay</button>
+      </section>
     </main>
     <!-- scripts -->
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>

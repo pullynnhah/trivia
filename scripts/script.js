@@ -64,7 +64,6 @@ function loadForm() {
     form.classList.remove("hidden");
   }
 
-  section.classList.add("hidden");
   renderFormAmountHTML(1, 50);
   renderFormCategoryHTML();
 }
@@ -73,8 +72,8 @@ function loadQuizes() {
   score = 0;
   answers = 0;
   form.classList.add("hidden");
-  if (section.classList.contains("hidden")) {
-    section.classList.remove("hidden");
+  if (quizesSec.classList.contains("hidden")) {
+    quizesSec.classList.remove("hidden");
   }
 
   let quizesHTML = "";
@@ -82,8 +81,8 @@ function loadQuizes() {
     quizesHTML += quizHTML(quiz);
   }
 
-  section.innerHTML = quizesHTML;
-  section.innerHTML += '<button class="result-btn">Get Results</button>';
+  quizesSec.innerHTML = quizesHTML;
+  quizesSec.innerHTML += '<button class="result-btn">Get Results</button>';
   resultBtn = document.querySelector(".result-btn");
 }
 
@@ -118,7 +117,19 @@ function verifyAnswer(element) {
 }
 
 function getResults() {
-  console.log(score / answers);
+  const result = (100 * score) / answers;
+
+  quizesSec.classList.add("hidden");
+  if (resultsSec.classList.contains("hidden")) {
+    resultsSec.classList.remove("hidden");
+  }
+
+  h4.textContent = `${result.toFixed(2)}%`;
+}
+
+function restart() {
+  resultsSec.classList.add("hidden");
+  loadForm();
 }
 
 const OPEN_TDB_URL = "https://opentdb.com";
@@ -129,7 +140,9 @@ const category = document.querySelector("#category");
 const difficulty = document.querySelector("#difficulty");
 const type = document.querySelector("#type");
 const submitBtn = document.querySelector(".submit-btn");
-const section = document.querySelector("section");
+const quizesSec = document.querySelector("section.quizes");
+const resultsSec = document.querySelector("section.results");
+const h4 = document.querySelector("h4");
 
 let resultBtn = null;
 

@@ -33,10 +33,6 @@ form {
   flex-direction: column;
 }
 
-.hidden {
-  display: none;
-}
-
 label {
   color: #212121;
   font-weight: 900;
@@ -82,7 +78,7 @@ button {
   box-shadow: 1px 1px rgba(0, 0, 0, 0.3);
 }
 
-section {
+section.quizes:not(.hidden) {
   display: flex;
   flex-direction: column;
   gap: 50px;
@@ -109,7 +105,7 @@ article div {
   gap: 20px;
 }
 
-p {
+.quizes p {
   width: 45%;
   padding: 10px;
   text-align: center;
@@ -141,4 +137,30 @@ div:not(.played) p:hover {
 .played .correct {
   color: #37383a;
   background-color: #b3de8a;
+}
+
+.results div {
+  padding: 20px;
+  border: 3px solid #212121;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+p {
+  font-weight: 500;
+  font-size: 36px;
+  color: #37383A;
+}
+
+h4 {
+  color: #F26674;
+  font-weight: 900;
+  font-size: 75px;
+}
+
+.hidden {
+  display: none;
 }
